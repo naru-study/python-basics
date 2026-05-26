@@ -52,9 +52,11 @@ def show_todos(todos):
         for i,todo in enumerate(todos,1):
             if todo["done"]:
                 checkbox = "✅"
+                status = "(完了)"
             else:
                 checkbox = "⬜️"
-            print(f"[{i}]{checkbox}{todo['title']}")
+                status = ""
+            print(f"[{i}]{checkbox}{todo['title']}{status}")
     input("Enterを押すとメニューに戻ります")
 
 #タスクを完了にする
